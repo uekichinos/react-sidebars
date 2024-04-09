@@ -94,7 +94,7 @@ export const Sidebar = () => {
       <nav className="sidebar-nav">
         <NavHeader />
         {menuItems.map((item) => (
-          <>
+          <div key={`a_${item.name}`}>
             {!item.items && (
               <NavButton
                 onClick={handleClick}
@@ -105,7 +105,7 @@ export const Sidebar = () => {
               />
             )}
             {item.items && (
-              <>
+              <div key={`b_${item.name}`}>
                 <NavButton
                   onClick={handleClick}
                   name={item.name}
@@ -121,14 +121,15 @@ export const Sidebar = () => {
                   {item.items.map((subItem) => (
                     <NavButton
                       onClick={handleClick}
+                      key={`c_${subItem}`}
                       name={subItem}
                       isActive={activeItem === subItem}
                     />
                   ))}
                 </div>
-              </>
+              </div>
             )}
-          </>
+          </div>
         ))}
       </nav>
     </aside>

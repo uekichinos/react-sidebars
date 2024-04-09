@@ -100,6 +100,7 @@ const SubMenu: FC<SubMenuProps> = ({ item, activeItem, handleClick }) => {
       <div ref={navRef} className="sub-nav-inner">
         {item?.items.map((subItem) => (
           <NavButton
+            key={subItem}
             onClick={handleClick}
             name={subItem}
             isActive={activeItem === subItem}
@@ -122,7 +123,7 @@ export const Sidebar = () => {
     <aside className="sidebar">
       <NavHeader />
       {menuItems.map((item) => (
-        <div>
+        <div key={item.name}>
           {!item.items && (
             <NavButton
               onClick={handleClick}

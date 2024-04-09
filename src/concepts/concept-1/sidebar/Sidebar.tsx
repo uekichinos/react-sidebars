@@ -72,6 +72,7 @@ export const Sidebar = ({
         {menuItems.map((item) => (
           <Button
             onClick={handleClick}
+            key={item.name}
             name={item.name}
             icon={item.icon}
             isActive={activeItem === item.name}

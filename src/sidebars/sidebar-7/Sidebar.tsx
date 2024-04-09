@@ -90,7 +90,7 @@ export const Sidebar = () => {
         >
           <div>
             {menuItems.map((item) => (
-              <NavButton name={item.name} icon={item.icon} />
+              <NavButton key={item.name} name={item.name} icon={item.icon} />
             ))}
           </div>
           <div>
@@ -116,22 +116,22 @@ export const Sidebar = () => {
               <div className="row">
                 <div className="switch-label">Dark Mode</div>
                 <span className="switch">
-                  <input id="switch-round" type="checkbox" />
-                  <label htmlFor="switch-round"></label>
+                  <input id="switch-round1" type="checkbox" />
+                  <label htmlFor="switch-round1"></label>
                 </span>
               </div>
               <div className="row">
                 <div className="switch-label">Accessibility Mode</div>
                 <span className="switch">
-                  <input id="switch-round" type="checkbox" />
-                  <label htmlFor="switch-round"></label>
+                  <input id="switch-round2" type="checkbox" />
+                  <label htmlFor="switch-round2"></label>
                 </span>
               </div>
               <div className="row">
                 <div className="switch-label">Quirks Mode</div>
                 <span className="switch">
-                  <input id="switch-round" type="checkbox" />
-                  <label htmlFor="switch-round"></label>
+                  <input id="switch-round3" type="checkbox" />
+                  <label htmlFor="switch-round3"></label>
                 </span>
               </div>
             </form>
